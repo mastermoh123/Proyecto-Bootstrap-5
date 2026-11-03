@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohara - Normativa</title>
+    <!-- Google Fonts: Inter, Plus Jakarta Sans & Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        /* Animación */
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .aparece {
+            animation: aparecer 0.6s ease both;
+        }
+
+        .norma-card {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .norma-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 .75rem 1.5rem rgba(62, 39, 35, .25) !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: var(--beige-rosado);
+            color: var(--marron-oscuro);
+            box-shadow: none;
+        }
+
+        .accordion-button:focus,
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--marron-madera);
+            box-shadow: 0 0 0 .2rem rgba(121, 85, 72, .25);
+        }
+
+        .form-check-input:checked {
+            background-color: var(--marron-nogal);
+            border-color: var(--marron-nogal);
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Cabecera -->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg sticky-top bg-color-marron-oscuro border-bottom border-3 border-warning">
+            <div class="container-fluid">
+
+                <!-- Logotipo -->
+                <a class="navbar-brand text-color-marfil fw-bold fs-5 " href="#">
+                    <i class="bi bi-book-half me-2"></i>Ohara
+                </a>
+
+                <!-- Botón responsive -->
+                <button class="navbar-toggler border-light py-1 shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list fs-3 text-color-marfil"></i>
+                </button>
+
+                <!-- Menú -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-underline mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-color-marfil fw-bold" aria-current="page" href="index.html">
+                                <i class="bi bi-house-door me-2"></i>Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-color-marfil active" href="normativa.html">
+                                <i class="bi bi-journal-text me-2"></i>Normativa
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-color-marfil" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-calendar-event me-2"></i>Eventos culturales
+                            </a>
+                            <ul class="dropdown-menu bg-color-marfil shadow">
+                                <li>
+                                    <a class="dropdown-item texto-principal rounded" href="eventos-culturales.html">
+                                        <i class="bi bi-calendar-event me-2"></i>Todos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item texto-principal rounded" href="eventos/conferencias.html">
+                                        <i class="bi bi-mic me-2"></i>Conferencias
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item texto-principal rounded" href="eventos/talleres.html">
+                                        <i class="bi bi-tools me-2"></i>Talleres
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item texto-principal rounded" href="eventos/exposiciones.html">
+                                        <i class="bi bi-collection me-2"></i>Exposiciones
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-color-marfil" href="formulario-sugerencias.html">
+                                <i class="bi bi-lightbulb me-2"></i>Sugerencias
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Redes sociales -->
+                    <div class="d-flex align-items-center gap-3 social-icons">
+                        <a href="#" class="text-color-marfil fs-5" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-color-marfil fs-5" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                        <a href="#" class="text-color-marfil fs-5" aria-label="X">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Cabecera -->
+        <header>
+            <!-- Imagen de cabecera compacta -->
+            <div class="position-relative overflow-hidden shadow border-bottom border-3 border-warning">
+                <img src="img/fondo-buscador.png" class="w-100 object-fit-cover" style="height: 300px;"
+                    alt="Biblioteca de Ohara">
+                <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-100 px-3">
+                    <h1 class="fw-bold mb-1 fs-3 fs-md-2">Biblioteca de Ohara</h1>
+                    <p class="d-none d-md-block small mb-2 text-light">
+                        Un espacio para descubrir, aprender y disfrutar del conocimiento libre.
+                    </p>
+
+                    <!-- Buscador compacto -->
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-8 col-lg-5">
+                            <div class="d-flex gap-1">
+                                <input type="search" class="form-control form-control-sm"
+                                    placeholder="Buscar libros, autores, artículos..." aria-label="Buscar">
+                                <button class="btn btn-warning btn-sm text-black fw-bold px-4 d-flex align-items-center"
+                                    type="button">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contenido principal -->
+        <main class="fondo-marfil texto-marron-oscuro py-4 py-lg-5">
+            <div class="container">
+
+                <!-- Migas de pan -->
+                <nav aria-label="breadcrumb" class="d-none d-md-block">
+                    <ol class="breadcrumb small">
+                        <li class="breadcrumb-item"><a href="index.html"
+                                class="text-color-marron-nogal text-decoration-none">Inicio</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Normativa</li>
+                    </ol>
+                </nav>
+
+                <!-- Cabecera de la sección -->
+                <div
+                    class="bg-color-marron-oscuro text-color-marfil text-center py-4 rounded border-bottom border-3 border-warning mb-4 shadow aparece">
+                    <h1 class="h3 mb-1 fw-bold text-color-marfil">Normativa de la Biblioteca</h1>
+                    <p class="small mb-0 text-color-marfil opacity-75">Normas de uso, préstamo y convivencia para
+                        disfrutar
+                        de Ohara entre todos</p>
+                </div>
+
+                <!-- Aviso importante -->
+                <div class="alert alert-warning d-flex align-items-start shadow-sm aparece" role="alert">
+                    <i class="bi bi-exclamation-triangle-fill me-3 fs-4"></i>
+                    <div>
+                        <strong>Aviso:</strong> el incumplimiento reiterado de las normas puede conllevar la suspensión
+                        temporal del carné de usuario.
+                        <span class="d-none d-md-inline">Consulta el resto de apartados para conocer los
+                            detalles.</span>
+                    </div>
+                </div>
+
+                <!-- Carrusel -->
+                <div id="carruselNormativa" class="carousel slide shadow rounded overflow-hidden mb-5"
+                    data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carruselNormativa" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Diapositiva 1"></button>
+                        <button type="button" data-bs-target="#carruselNormativa" data-bs-slide-to="1"
+                            aria-label="Diapositiva 2"></button>
+                        <button type="button" data-bs-target="#carruselNormativa" data-bs-slide-to="2"
+                            aria-label="Diapositiva 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/eventos/conferencias/conf1.png" class="d-block w-100 object-fit-cover"
+                                style="height: 320px;" alt="Sala de lectura de la biblioteca">
+                            <div class="carousel-caption bg-color-marron-oscuro bg-opacity-75 rounded mb-3 py-2">
+                                <h2 class="h5 mb-0">Silencio y respeto</h2>
+                                <p class="small mb-0 d-none d-md-block">Las salas de lectura son espacios de estudio y
+                                    concentración.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/eventos/exposiciones/expo1.png" class="d-block w-100 object-fit-cover"
+                                style="height: 320px;" alt="Fondos de la biblioteca">
+                            <div class="carousel-caption bg-color-marron-oscuro bg-opacity-75 rounded mb-3 py-2">
+                                <h2 class="h5 mb-0">Cuida los fondos</h2>
+                                <p class="small mb-0 d-none d-md-block">Los libros son patrimonio de todos: trátalos con
+                                    cuidado.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/eventos/talleres/taller1.png" class="d-block w-100 object-fit-cover"
+                                style="height: 320px;" alt="Taller de restauración">
+                            <div class="carousel-caption bg-color-marron-oscuro bg-opacity-75 rounded mb-3 py-2">
+                                <h2 class="h5 mb-0">Participa en las actividades</h2>
+                                <p class="small mb-0 d-none d-md-block">Cada evento tiene sus propias normas de aforo e
+                                    inscripción.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carruselNormativa"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carruselNormativa"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+
+                <!-- Cards: normas básicas (1 col móvil, 2 tablet, 3 escritorio) -->
+                <h2 class="h4 fw-bold text-color-marron-oscuro mb-3">
+                    <i class="bi bi-bookmark-star me-2 text-color-marron-madera"></i>Normas básicas
+                </h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm norma-card bg-color-beige-rosado">
+                            <img src="img/eventos/conferencias/conf2.png" class="card-img-top object-fit-cover"
+                                style="height: 180px;" alt="Zona de lectura">
+                            <div class="card-body">
+                                <h3 class="h5 card-title text-color-marron-oscuro">
+                                    Sala de lectura <span class="badge bg-color-marron-nogal ms-1">Silencio</span>
+                                </h3>
+                                <p class="card-text small">Mantén el silencio, silencia el móvil y evita conversaciones
+                                    en
+                                    voz alta. Se prohíbe comer y beber, salvo agua en botella cerrada.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm norma-card bg-color-beige-rosado">
+                            <img src="img/eventos/exposiciones/expo2.png" class="card-img-top object-fit-cover"
+                                style="height: 180px;" alt="Estanterías con libros">
+                            <div class="card-body">
+                                <h3 class="h5 card-title text-color-marron-oscuro">
+                                    Cuidado de los fondos <span
+                                        class="badge bg-color-marron-madera ms-1">Patrimonio</span>
+                                </h3>
+                                <p class="card-text small">No subrayes, dobles ni recortes los libros. Deja los
+                                    ejemplares
+                                    consultados en los carros de devolución, sin recolocarlos en las estanterías.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm norma-card bg-color-beige-rosado">
+                            <img src="img/eventos/talleres/taller2.png" class="card-img-top object-fit-cover"
+                                style="height: 180px;" alt="Actividad en la biblioteca">
+                            <div class="card-body">
+                                <h3 class="h5 card-title text-color-marron-oscuro">
+                                    Actividades y eventos <span class="badge bg-warning text-dark ms-1">Aforo</span>
+                                </h3>
+                                <p class="card-text small">Las conferencias, talleres y exposiciones tienen aforo
+                                    limitado.
+                                    Se requiere inscripción previa y puntualidad.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-3">
+                                <a href="eventos-culturales.html"
+                                    class="btn btn-sm text-color-marfil bg-color-marron-nogal">
+                                    <i class="bi bi-calendar-event me-1"></i>Ver eventos
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabla de préstamos -->
+                <h2 class="h4 fw-bold text-color-marron-oscuro mb-3">
+                    <i class="bi bi-table me-2 text-color-marron-madera"></i>Condiciones de préstamo
+                </h2>
+                <div class="table-responsive shadow-sm rounded mb-5">
+                    <table class="table table-striped table-hover align-middle mb-0">
+                        <caption class="d-none d-md-table-caption px-2">Plazos de préstamo según el tipo de material.
+                        </caption>
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Material</th>
+                                <th scope="col" class="text-center">Máx. ejemplares</th>
+                                <th scope="col" class="text-center">Plazo</th>
+                                <th scope="col" class="text-center d-none d-md-table-cell">Renovaciones</th>
+                                <th scope="col" class="d-none d-lg-table-cell">Sanción por retraso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><i class="bi bi-book me-2"></i>Libros</th>
+                                <td class="text-center">5</td>
+                                <td class="text-center">30 días</td>
+                                <td class="text-center d-none d-md-table-cell">2</td>
+                                <td class="d-none d-lg-table-cell">1 día de suspensión por día de retraso</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><i class="bi bi-film me-2"></i>Audiovisuales</th>
+                                <td class="text-center">2</td>
+                                <td class="text-center">7 días</td>
+                                <td class="text-center d-none d-md-table-cell">1</td>
+                                <td class="d-none d-lg-table-cell">2 días de suspensión por día de retraso</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><i class="bi bi-newspaper me-2"></i>Revistas</th>
+                                <td class="text-center">3</td>
+                                <td class="text-center">15 días</td>
+                                <td class="text-center d-none d-md-table-cell">1</td>
+                                <td class="d-none d-lg-table-cell">1 día de suspensión por día de retraso</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><i class="bi bi-archive me-2"></i>Fondo antiguo</th>
+                                <td class="text-center">—</td>
+                                <td class="text-center"><span class="badge bg-danger">Solo consulta</span></td>
+                                <td class="text-center d-none d-md-table-cell">—</td>
+                                <td class="d-none d-lg-table-cell">Revisión por la dirección</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Acordeón -->
+                <div class="row g-4 mb-5">
+                    <div class="col-12">
+                        <h2 class="h4 fw-bold text-color-marron-oscuro mb-3">
+                            <i class="bi bi-question-circle me-2 text-color-marron-madera"></i>Preguntas frecuentes
+                        </h2>
+                        <div class="accordion shadow-sm" id="faqNormativa">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                        ¿Cómo obtengo el carné de la biblioteca?
+                                    </button>
+                                </h3>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqNormativa">
+                                    <div class="accordion-body small">
+                                        Presenta tu DNI en el mostrador de atención. El carné es gratuito, personal e
+                                        intransferible.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                        ¿Qué ocurre si pierdo o daño un libro?
+                                    </button>
+                                </h3>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqNormativa">
+                                    <div class="accordion-body small">
+                                        Deberás reponer el ejemplar o abonar su valor. Comunícalo cuanto antes en el
+                                        mostrador.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                        ¿Puedo usar los ordenadores y el wifi?
+                                    </button>
+                                </h3>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqNormativa">
+                                    <div class="accordion-body small">
+                                        Sí, con el carné en vigor. El uso de los ordenadores está limitado a una hora
+                                        diaria cuando haya otras personas esperando.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                        ¿Dónde puedo hacer una queja o sugerencia?
+                                    </button>
+                                </h3>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqNormativa">
+                                    <div class="accordion-body small">
+                                        Puedes hacerlo desde el
+                                        <a href="formulario-sugerencias.html" class="text-color-marron-nogal">buzón de
+                                            sugerencias</a> de esta web.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Pie de página (Footer) -->
+        <footer class="mt-auto bg-color-marron-oscuro text-color-marfil border-top border-3 border-warning py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+
+                    <!-- Columna 1: Info e Identidad -->
+                    <div class="col-12 col-md-5 text-center text-md-start">
+                        <a class="text-color-marfil fw-bold fs-5 text-decoration-none d-inline-flex align-items-center mb-2"
+                            href="index.html">
+                            <i class="bi bi-book-half me-2 text-color-marfil"></i>Biblioteca de Ohara
+                        </a>
+                        <p class="small text-color-marfil opacity-75 mb-0">
+                            Preservando la historia y fomentando el conocimiento libre para las futuras generaciones.
+                        </p>
+                    </div>
+
+                    <!-- Columna 2: Enlaces rápidos -->
+                    <div class="col-12 col-md-4 text-center">
+                        <div class="d-flex flex-wrap justify-content-center gap-2 gap-sm-3">
+                            <a href="index.html" class="text-color-marfil text-decoration-none small">Inicio</a>
+                            <span class="opacity-50 d-none d-sm-inline">•</span>
+                            <a href="normativa.html"
+                                class="text-color-marfil text-decoration-none small">Normativa</a>
+                            <span class="opacity-50 d-none d-sm-inline">•</span>
+                            <a href="eventos-culturales.html"
+                                class="text-color-marfil text-decoration-none small">Eventos</a>
+                            <span class="opacity-50 d-none d-sm-inline">•</span>
+                            <a href="formulario-sugerencias.html"
+                                class="text-color-marfil text-decoration-none small">Sugerencias</a>
+                        </div>
+                    </div>
+
+                    <!-- Columna 3: Redes Sociales y Firma -->
+                    <div class="col-12 col-md-3 text-center text-md-end">
+                        <div class="d-flex justify-content-center justify-content-md-end gap-3 social-icons mb-2">
+                            <a href="#" class="text-color-marfil fs-5" aria-label="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="#" class="text-color-marfil fs-5" aria-label="TikTok">
+                                <i class="bi bi-tiktok"></i>
+                            </a>
+                            <a href="#" class="text-color-marfil fs-5" aria-label="X">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                        </div>
+                        <small class="opacity-75 d-block">&copy; 2026 Biblioteca de Ohara</small>
+                        <small class="opacity-50 d-block">Por <strong>Juan José Lobo Cabeza</strong></small>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

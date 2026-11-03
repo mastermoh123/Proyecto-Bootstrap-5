@@ -1,0 +1,125 @@
+/* Fuente general para el cuerpo */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Subtítulos y elementos de navegación */
+h2, h3, .h2, .h3, .navbar-brand {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Títulos principales con estilo clásico/editorial */
+h1, .h1, legend {
+    font-family: 'Cinzel', serif;
+}
+
+:root {
+    --marron-oscuro: #3e2723;
+    --marron-nogal: #5d4037;
+    --marron-madera: #795548;
+    --marron-suave: #a1887f;
+    --beige-rosado: #d7ccc8;
+    --marfil: #efebe9;
+}
+
+body {
+    background-color: var(--marfil);
+}
+
+/* Colores para fondos */
+.bg-color-marron-oscuro {
+    background-color: var(--marron-oscuro) !important;
+}
+
+.bg-color-marron-nogal {
+    background-color: var(--marron-nogal) !important;
+}
+
+.bg-color-marron-madera {
+    background-color: var(--marron-madera) !important;
+}
+
+.bg-color-marron-suave {
+    background-color: var(--marron-suave) !important;
+}
+
+.bg-color-beige-rosado {
+    background-color: var(--beige-rosado) !important;
+}
+
+.bg-color-marfil {
+    background-color: var(--marfil) !important;
+}
+
+/* Colores para textos */
+.text-color-marron-oscuro {
+    color: var(--marron-oscuro) !important;
+}
+
+.text-color-marron-nogal {
+    color: var(--marron-nogal) !important;
+}
+
+.text-color-marron-madera {
+    color: var(--marron-madera) !important;
+}
+
+.text-color-marron-suave {
+    color: var(--marron-suave) !important;
+}
+
+.text-color-beige-rosado {
+    color: var(--beige-rosado) !important;
+}
+
+.text-color-marfil {
+    color: var(--marfil) !important;
+}
+
+/* Animación al abrir el dropdown */
+.dropdown-menu {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:active,
+.dropdown-menu .dropdown-item:focus {
+    background-color: transparent;
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--marron-oscuro);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Hover redes sociales */
+.social-icons a {
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: var(--marron-suave) !important;
+    transform: translateY(-3px);
+}
+
+/* Focus paginación */
+.page-link:focus {
+    background-color: transparent;
+    color: inherit;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Oscurece un poco las imágenes del carrusel para que resalte el texto */
+#carouselOhara .carousel-item img {
+    filter: brightness(0.80);
+}

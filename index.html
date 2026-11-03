@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohara - Biblioteca</title>
+    <!-- Google Fonts: Inter, Plus Jakarta Sans & Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-color-marron-oscuro border-bottom border-3 border-warning">
+        <div class="container-fluid">
+
+            <!-- Logotipo -->
+            <a class="navbar-brand text-color-marfil fw-bold fs-5 " href="#">
+                <i class="bi bi-book-half me-2"></i>Ohara
+            </a>
+
+            <!-- Botón responsive -->
+            <button class="navbar-toggler border-light py-1 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list fs-3 text-color-marfil"></i>
+            </button>
+
+            <!-- Menú -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-underline mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-color-marfil fw-bold active" aria-current="page" href="index.html">
+                            <i class="bi bi-house-door me-2"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-color-marfil" href="normativa.html">
+                            <i class="bi bi-journal-text me-2"></i>Normativa
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-color-marfil" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-calendar-event me-2"></i>Eventos culturales
+                        </a>
+                        <ul class="dropdown-menu bg-color-marfil shadow">
+                            <li>
+                                <a class="dropdown-item texto-principal rounded" href="eventos-culturales.html">
+                                    <i class="bi bi-calendar-event me-2"></i>Todos
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item texto-principal rounded" href="eventos/conferencias.html">
+                                    <i class="bi bi-mic me-2"></i>Conferencias
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item texto-principal rounded" href="eventos/talleres.html">
+                                    <i class="bi bi-tools me-2"></i>Talleres
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item texto-principal rounded" href="eventos/exposiciones.html">
+                                    <i class="bi bi-collection me-2"></i>Exposiciones
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-color-marfil" href="formulario-sugerencias.html">
+                            <i class="bi bi-lightbulb me-2"></i>Sugerencias
+                        </a>
+                    </li>
+                </ul>
+                <!-- Redes sociales -->
+                <div class="d-flex align-items-center gap-3 social-icons">
+                    <a href="#" class="text-color-marfil fs-5" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" class="text-color-marfil fs-5" aria-label="TikTok">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+                    <a href="#" class="text-color-marfil fs-5" aria-label="X">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Cabecera -->
+    <header>
+        <!-- Imagen de cabecera compacta -->
+        <div class="position-relative overflow-hidden shadow border-bottom border-3 border-warning">
+            <img src="img/fondo-buscador.png" class="w-100 object-fit-cover" style="height: 300px;"
+                alt="Biblioteca de Ohara">
+            <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-100 px-3">
+                <h1 class="fw-bold mb-1 fs-3 fs-md-2">Biblioteca de Ohara</h1>
+                <p class="d-none d-md-block small mb-2 text-light">
+                    Un espacio para descubrir, aprender y disfrutar del conocimiento libre.
+                </p>
+
+                <!-- Buscador compacto -->
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-5">
+                        <div class="d-flex gap-1">
+                            <input type="search" class="form-control form-control-sm"
+                                placeholder="Buscar libros, autores, artículos..." aria-label="Buscar">
+                            <button class="btn btn-warning btn-sm text-black fw-bold px-4 d-flex align-items-center"
+                                type="button">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="fondo-marfil texto-marron-oscuro">
+        <div class="container-fluid py-4 bg-color-marfil">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-5 mx-auto">
+                    <h1 class="text-uppercase fw-bold mb-2">Biblioteca Ohara</h1>
+                    <h4 class="fw-bold mb-3">Tu lugar de confianza</h4>
+                    <p class="text-muted mb-4 lead fs-6">
+                        Cultivamos el saber en un espacio único. Nuestro establecimiento nace del amor por los libros,
+                        el
+                        medio ambiente y el aprendizaje compartido.
+                    </p>
+                    <ul class="list-unstyled text-secondary mb-4 d-md-flex d-lg-block gap-3 px-md-4 px-lg-0">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Espacios de
+                            lectura inmersivos.</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Comunidad abierta
+                            al conocimiento.</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Arquitectura
+                            sostenible e inspiradora.</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Establecimiento
+                            digitalizado.</li>
+                    </ul>
+                </div>
+
+                <!-- Imagen centrada horizontalmente en su columna -->
+                <div class="col-md-6 d-flex justify-content-center mx-auto">
+                    <img src="img/background.jpg" alt="Árbol de libros"
+                        class="img-fluid rounded shadow-sm w-100 object-fit-cover">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- QUIENES SOMOS -->
+        <div class="container-fluid py-4 bg-white">
+            <div class="row justify-content-center">
+                <h2 class="m-4 text-center">¿Quiénes Somos?</h2>
+
+                <div class="row justify-content-center align-items-start g-4">
+
+                    <div class="col-12 col-md-10 col-lg-6 p-lg-5 p-0"> 
+                        <div class="accordion mb-4" id="accordionExample">
+
+                            <!-- ITEM 1 -->
+                            <div class="accordion-item m-1">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed bg-color-beige-rosado text-color-marron-oscuro"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                        aria-expanded="false" aria-controls="collapseOne"
+                                        style="--bs-accordion-active-bg: #ffffff; box-shadow: none;">
+                                        Sobre nosotros
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Somos los predicadores del conocimiento. Nacimos con la idea de recolectar el
+                                        saber
+                                        humano y otorgarlo a las
+                                        generaciones futuras con el fin de <b>aprender</b> y <b>saber</b>.
+                                        <br>
+                                        <br>
+                                        Aquí podrás encontrar todos los libros en cualquier idioma que tú busques y de
+                                        cualquier
+                                        editorial.
+                                        Contamos con unas instalaciones sostenibles y digitalizadas para que su estancia
+                                        sea
+                                        agradable y natural.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ITEM 2 -->
+                            <div class="accordion-item m-1">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed bg-color-beige-rosado text-color-marron-oscuro"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo"
+                                        style="--bs-accordion-active-bg: #ffffff; box-shadow: none;">
+                                        ¿Dónde estamos?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Nos puedes encontrar en <b> c/ Ohara</b> del <b>distrito 17</b>. Estamos
+                                        ubicados
+                                        frente
+                                        al ayuntamiento municipal
+                                        en una zona cercana al mar para que tus vistas por la ventana no sean de coches
+                                        y
+                                        ruido,
+                                        sino de las tranquilas olas del mar agitándose
+                                        a lo lejos.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ITEM 3 -->
+                            <div class="accordion-item m-1">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed bg-color-beige-rosado text-color-marron-oscuro"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                        aria-expanded="false" aria-controls="collapseThree"
+                                        style="--bs-accordion-active-bg: #ffffff; box-shadow: none;">
+                                        Nuestros servicios
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2">
+                                                <i class="bi bi-book"></i> <b>Préstamos: </b>
+                                                Ofrecemos préstamos totalmente flexibles a todo tipo de libros.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-cup"></i> <b>Áreas de descanso: </b>
+                                                Disfruta de una estancia cómoda y agradable en tu nueva zona de comfort,
+                                                donde leer, estudiar o trabajar se hace liviano.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-tablet"></i> <b>E-Books digitales: </b>
+                                                Descarga tu contenido favorito desde casa.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-wifi"></i> <b>WiFi Gratuito: </b>
+                                                Conexión gratuita en todo el edificio y más de 15 equipos listos para
+                                                ti.
+                                            </li>
+                                            <li>
+                                                <i class="bi bi-star"></i> <b>Mucho más: </b>
+                                                Descubre mucho más visitándonos. ¡Te esperamos!
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ITEM 4 -->
+                            <div class="accordion-item m-1">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed bg-color-beige-rosado text-color-marron-oscuro"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                        aria-expanded="false" aria-controls="collapseFour"
+                                        style="--bs-accordion-active-bg: #ffffff; box-shadow: none;">
+                                        ¿Cómo me hago socio?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Para saber cómo te puedes hacer socio consulta el <a href="formulario-sugerencias.html">formulario</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carrusel -->
+                    <div class="col-12 col-md-10 col-lg-6"> 
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade position-relative w-100">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/carousel_1.jpg" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/carousel_2.jpg" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/carousel_3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TABLA -->
+        <div class="container-fluid py-4 bg-color-marfil mb-4"> 
+            <div class="row justify-content-center align-items-center text-center">
+                <h2 class="m-4">Horarios</h2>
+                <h5>Disponemos de un horario pensado para las necesidades de todos y todas,
+                    <b>tu estancia es nuestra felicidad</b>
+                </h5>
+                <p class="mb-4">(Este horario es provisional y puede cambiar acorde a situaciones de emergencia o
+                    imprevistos. Disculpen las molestias.)</p>
+                <div class="col col-12 col-md-10 col-lg-8 col-xl-6">
+                    <table class="table table-striped col-12 col-md-10 col-lg-8 mx-auto">
+                        <thead>
+                            <tr>
+                                <th class="py-2 py-md-3 py-lg-4 border-bottom border-black">Día</th>
+                                <th class="py-2 py-md-3 py-lg-4 border-bottom border-black">Horario</th>
+                                <th class="py-2 py-md-3 py-lg-4 border-bottom border-black">Festivos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 py-md-3 py-lg-4">Lunes - Viernes</td>
+                                <td class="py-2 py-md-3 py-lg-4">09:00 - 23:00</td>
+                                <td class="py-2 py-md-3 py-lg-4">10:00 - 14:00</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 py-md-3 py-lg-4">Sábados</td>
+                                <td class="py-2 py-md-3 py-lg-4">10:00 - 14:00</td>
+                                <td class="py-2 py-md-3 py-lg-4">Cerrado</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 py-md-3 py-lg-4">Domingos</td>
+                                <td class="py-2 py-md-3 py-lg-4">10:00 - 14:00</td>
+                                <td class="py-2 py-md-3 py-lg-4">Cerrado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página (Footer) -->
+    <footer class="mt-auto bg-color-marron-oscuro text-color-marfil border-top border-3 border-warning py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+
+                <!-- Columna 1: Info e Identidad -->
+                <div class="col-12 col-md-5 text-center text-md-start">
+                    <a class="text-color-marfil fw-bold fs-5 text-decoration-none d-inline-flex align-items-center mb-2"
+                        href="#">
+                        <i class="bi bi-book-half me-2 text-color-marfil"></i>Biblioteca de Ohara
+                    </a>
+                    <p class="small text-color-marfil opacity-75 mb-0">
+                        Preservando la historia y fomentando el conocimiento libre para las futuras generaciones.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Enlaces rápidos -->
+                <div class="col-12 col-md-4 text-center">
+                    <div class="d-flex flex-wrap justify-content-center gap-2 gap-sm-3">
+                        <a href="#" class="text-color-marfil text-decoration-none small">Inicio</a>
+                        <span class="opacity-50 d-none d-sm-inline">•</span>
+                        <a href="normativa.html" class="text-color-marfil text-decoration-none small">Normativa</a>
+                        <span class="opacity-50 d-none d-sm-inline">•</span>
+                        <a href="eventos-culturales.html"
+                            class="text-color-marfil text-decoration-none small">Eventos</a>
+                        <span class="opacity-50 d-none d-sm-inline">•</span>
+                        <a href="formulario-sugerencias.html"
+                            class="text-color-marfil text-decoration-none small">Sugerencias</a>
+                    </div>
+                </div>
+
+                <!-- Columna 3: Redes Sociales y Firma -->
+                <div class="col-12 col-md-3 text-center text-md-end">
+                    <div class="d-flex justify-content-center justify-content-md-end gap-3 social-icons mb-2">
+                        <a href="#" class="text-color-marfil fs-5" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-color-marfil fs-5" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                        <a href="#" class="text-color-marfil fs-5" aria-label="X">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                    </div>
+                    <small class="opacity-75 d-block">&copy; 2026 Biblioteca de Ohara</small>
+                    <small class="opacity-50 d-block">Por <strong>Carlos García Gavira</strong></small>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
